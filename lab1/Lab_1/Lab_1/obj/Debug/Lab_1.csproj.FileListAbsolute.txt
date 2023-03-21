@@ -1,0 +1,16 @@
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\bin\Debug\Lab_1.exe.config
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\bin\Debug\Lab_1.exe
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\bin\Debug\Lab_1.pdb
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.AssemblyReference.cache
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.SuggestedBindingRedirects.cache
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.Bai_1.resources
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.Form1.resources
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.Properties.Resources.resources
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.GenerateResource.cache
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.CoreCompileInputs.cache
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.exe
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.pdb
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.Bai2.resources
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.Bai3.resources
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.Bai4.resources
+D:\HOC\Code\ltmcb\Git\lab1\Lab_1\Lab_1\obj\Debug\Lab_1.Bai5.resources
