@@ -1,0 +1,11 @@
+D:\HOC\Code\ltmcb\Exercise_3\Server\bin\Debug\Server.exe.config
+D:\HOC\Code\ltmcb\Exercise_3\Server\bin\Debug\Server.exe
+D:\HOC\Code\ltmcb\Exercise_3\Server\bin\Debug\Server.pdb
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.Server.resources
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.Properties.Resources.resources
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.exe
+D:\HOC\Code\ltmcb\Exercise_3\Server\obj\Debug\Server.pdb

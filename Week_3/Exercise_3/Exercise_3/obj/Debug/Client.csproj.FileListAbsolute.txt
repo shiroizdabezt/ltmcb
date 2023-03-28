@@ -1,0 +1,11 @@
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\bin\Debug\Exercise_3.exe.config
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\bin\Debug\Exercise_3.exe
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\bin\Debug\Exercise_3.pdb
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Exercise_3.Properties.Resources.resources
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Client.csproj.GenerateResource.cache
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Exercise_3.exe
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Exercise_3.pdb
+D:\HOC\Code\ltmcb\Exercise_3\Exercise_3\obj\Debug\Client.Client.resources
