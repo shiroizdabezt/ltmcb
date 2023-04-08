@@ -10,3 +10,4 @@ D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.GenerateResource.
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.CoreCompileInputs.cache
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.exe
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.pdb
+D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.Bai2.resources
