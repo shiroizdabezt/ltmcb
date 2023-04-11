@@ -11,3 +11,4 @@ D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.csproj.CoreCompileInputs
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.exe
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.pdb
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.Bai2.resources
+D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.Bai4.resources

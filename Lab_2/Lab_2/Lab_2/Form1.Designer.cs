@@ -78,6 +78,7 @@
             this.btn_bai4.TabIndex = 3;
             this.btn_bai4.Text = "Bài 4";
             this.btn_bai4.UseVisualStyleBackColor = true;
+            this.btn_bai4.Click += new System.EventHandler(this.btn_bai4_Click);
             // 
             // btn_bai5
             // 
