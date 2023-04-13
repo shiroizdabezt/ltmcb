@@ -99,6 +99,7 @@
             this.btn_bai6.TabIndex = 5;
             this.btn_bai6.Text = "Bài 6";
             this.btn_bai6.UseVisualStyleBackColor = true;
+            this.btn_bai6.Click += new System.EventHandler(this.btn_bai6_Click);
             // 
             // Form1
             // 
