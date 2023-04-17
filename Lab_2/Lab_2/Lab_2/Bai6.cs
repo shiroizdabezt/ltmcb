@@ -57,7 +57,8 @@ namespace Lab_2
                     s.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||
                     s.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
                     s.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase) ||
-                    s.EndsWith(".gif", StringComparison.OrdinalIgnoreCase))
+                    s.EndsWith(".gif", StringComparison.OrdinalIgnoreCase) ||
+                    s.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
                 {
                     TreeNode node = treeNode.Nodes.Add(Path.GetFileName(s));
                     node.Tag = s; 
@@ -72,8 +73,10 @@ namespace Lab_2
         private void tree_caythumuc_AfterSelect(object sender, TreeViewEventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            if (e.Node.Tag != null)
+            if (e.Node.Tag != null && (e.Node.Tag.ToString().ToLower().EndsWith(".jpg") || e.Node.Tag.ToString().ToLower().EndsWith(".jpeg") || e.Node.Tag.ToString().ToLower().EndsWith(".png") || e.Node.Tag.ToString().ToLower().EndsWith(".bmp") || e.Node.Tag.ToString().ToLower().EndsWith(".gif") ))
             {
+                flowLayoutPanel1.Visible = true;
+                richTextBox1.Visible = false;
                 string filePath = e.Node.Tag.ToString();
                 PictureBox pic = new PictureBox();
                 pic.Image = Image.FromFile(filePath);
@@ -82,6 +85,30 @@ namespace Lab_2
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 flowLayoutPanel1.Controls.Add(pic);
             }
+            else
+            { flowLayoutPanel1.Controls.Clear(); }
+
+
+            richTextBox1.Clear();
+
+            // Check if the selected node represents a text file
+            if (e.Node.Tag != null && e.Node.Tag.ToString().ToLower().EndsWith(".txt"))
+            {
+                flowLayoutPanel1.Visible = false;
+                richTextBox1.Visible = true;
+                // Load the contents of the text file from the file path stored in the Tag property of the node
+                string filePath = e.Node.Tag.ToString();
+                string text = File.ReadAllText(filePath);
+                richTextBox1.Text += text;
+                /*using (StreamReader reader = new StreamReader(e.Node.Tag.ToString()))
+                {
+                    string content = reader.ReadToEnd();
+                    // Làm gì đó với nội dung của file văn bản ở đây.
+                    richTextBox1.Text = content;
+                }*/
+            }
+            else
+            { richTextBox1.Controls.Clear(); }
         }
 
     }

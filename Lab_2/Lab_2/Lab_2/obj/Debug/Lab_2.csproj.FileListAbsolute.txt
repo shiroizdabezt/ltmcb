@@ -13,3 +13,4 @@ D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.pdb
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.Bai2.resources
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.Bai4.resources
 D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.Bai6.resources
+D:\HOC\Code\ltmcb\Git\Lab_2\Lab_2\Lab_2\obj\Debug\Lab_2.Bai3.resources
