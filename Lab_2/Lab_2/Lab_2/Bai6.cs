@@ -110,6 +110,5 @@ namespace Lab_2
             else
             { richTextBox1.Controls.Clear(); }
         }
-
     }
 }
