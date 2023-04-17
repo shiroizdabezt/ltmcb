@@ -143,7 +143,7 @@ namespace Lab_2
             {
                 using (StreamWriter sr = new StreamWriter(sfd.FileName))
                 {
-                    sr.WriteLine(sr);
+                    sr.WriteLine(richtxt_file.Text);
                 }
                 MessageBox.Show("Ghi thành công vào file: " + sfd.FileName.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
