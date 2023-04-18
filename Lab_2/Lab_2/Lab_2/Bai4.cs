@@ -137,7 +137,7 @@ namespace Lab_2
 
         private void btn_ghi_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
+            /*SaveFileDialog sfd = new SaveFileDialog();
             sfd.DefaultExt = "txt";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
@@ -147,32 +147,52 @@ namespace Lab_2
                 }
                 MessageBox.Show("Ghi thành công vào file: " + sfd.FileName.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            btn_doc.Enabled = true;*/
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.DefaultExt = "txt"; // Use a binary file extension
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(fs, richtxt_file.Text);
+                }
+                MessageBox.Show("Ghi thành công vào file: " + sfd.FileName.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             btn_doc.Enabled = true;
         }
         private void btn_doc_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
+            /*OpenFileDialog dlg = new OpenFileDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 FileStream fstr = new FileStream(dlg.FileName, FileMode.OpenOrCreate);
                 StreamReader sr = new StreamReader(fstr);
                 richtxt_file.Text = sr.ReadToEnd();
                 Hienthongtin(index);
-            }
-            /*SaveFileDialog sfd = new SaveFileDialog();
-            sfd.DefaultExt = "txt";
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                using (StreamWriter sr = new StreamWriter(sfd.FileName))
-                {
-                    sr.WriteLine(sr);
-                }
-                MessageBox.Show("Ghi thành công vào file: " + sfd.FileName.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }*/
+
+
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream fs = new FileStream(dlg.FileName, FileMode.Open))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    richtxt_file.Text = (string)formatter.Deserialize(fs);
+                }
+                Hienthongtin(index);
+            }
             btn_truoc.Enabled = false;
             btn_sau.Enabled = true;
-            
+
             richtxt_file.Clear();
+
+
+/*            btn_truoc.Enabled = false;
+            btn_sau.Enabled = true;
+            
+            richtxt_file.Clear();*/
         }
 
         void Hienthongtin(int a)
