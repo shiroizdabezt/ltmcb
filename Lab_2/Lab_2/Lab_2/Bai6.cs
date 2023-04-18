@@ -72,21 +72,31 @@ namespace Lab_2
         }
         private void tree_caythumuc_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
+            pictureBox1.Image = null;
+            /*flowLayoutPanel1.Controls.Clear();*/
             if (e.Node.Tag != null && (e.Node.Tag.ToString().ToLower().EndsWith(".jpg") || e.Node.Tag.ToString().ToLower().EndsWith(".jpeg") || e.Node.Tag.ToString().ToLower().EndsWith(".png") || e.Node.Tag.ToString().ToLower().EndsWith(".bmp") || e.Node.Tag.ToString().ToLower().EndsWith(".gif") ))
             {
-                flowLayoutPanel1.Visible = true;
+                pictureBox1.Visible = true;
+                /*flowLayoutPanel1.Visible = true;*/
                 richTextBox1.Visible = false;
                 string filePath = e.Node.Tag.ToString();
-                PictureBox pic = new PictureBox();
+                /*PictureBox pic = new PictureBox();
                 pic.Image = Image.FromFile(filePath);
                 pic.Height = 702;
                 pic.Width = 702;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                flowLayoutPanel1.Controls.Add(pic);
+                flowLayoutPanel1.Controls.Add(pic);*/
+
+
+                Image image = Image.FromFile(filePath);
+                pictureBox1.Image = image;
+                
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
             else
-            { flowLayoutPanel1.Controls.Clear(); }
+            { /*flowLayoutPanel1.Controls.Clear();*/
+                pictureBox1.Image = null;
+            }
 
 
             richTextBox1.Clear();
@@ -94,12 +104,14 @@ namespace Lab_2
             // Check if the selected node represents a text file
             if (e.Node.Tag != null && e.Node.Tag.ToString().ToLower().EndsWith(".txt"))
             {
-                flowLayoutPanel1.Visible = false;
+                pictureBox1.Visible = false;
+                /*flowLayoutPanel1.Visible = false;*/
                 richTextBox1.Visible = true;
                 // Load the contents of the text file from the file path stored in the Tag property of the node
                 string filePath = e.Node.Tag.ToString();
                 string text = File.ReadAllText(filePath);
                 richTextBox1.Text += text;
+                
                 /*using (StreamReader reader = new StreamReader(e.Node.Tag.ToString()))
                 {
                     string content = reader.ReadToEnd();
