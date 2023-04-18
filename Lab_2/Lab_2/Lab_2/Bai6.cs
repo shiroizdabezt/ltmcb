@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Lab_2
 {
@@ -41,7 +42,7 @@ namespace Lab_2
         {   
             
             TreeNode treeNode = e.Node;
-
+            TreeNodeCollection nodes = treeNode.Nodes;
             treeNode.Nodes.Clear();
 
             string[] dsthumuc = Directory.GetDirectories(treeNode.FullPath);
@@ -53,7 +54,7 @@ namespace Lab_2
             }
             foreach (string s in dsfile)
             {
-                if (s.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
+                /*if (s.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
                     s.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||
                     s.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
                     s.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase) ||
@@ -62,7 +63,9 @@ namespace Lab_2
                 {
                     TreeNode node = treeNode.Nodes.Add(Path.GetFileName(s));
                     node.Tag = s; 
-                }
+                }*/
+                TreeNode node = new TreeNode(Path.GetFileName(s));
+                nodes.Add(node);
             }
         }
 
@@ -73,54 +76,37 @@ namespace Lab_2
         private void tree_caythumuc_AfterSelect(object sender, TreeViewEventArgs e)
         {
             pictureBox1.Image = null;
-            /*flowLayoutPanel1.Controls.Clear();*/
-            if (e.Node.Tag != null && (e.Node.Tag.ToString().ToLower().EndsWith(".jpg") || e.Node.Tag.ToString().ToLower().EndsWith(".jpeg") || e.Node.Tag.ToString().ToLower().EndsWith(".png") || e.Node.Tag.ToString().ToLower().EndsWith(".bmp") || e.Node.Tag.ToString().ToLower().EndsWith(".gif") ))
-            {
-                pictureBox1.Visible = true;
-                /*flowLayoutPanel1.Visible = true;*/
-                richTextBox1.Visible = false;
-                string filePath = e.Node.Tag.ToString();
-                /*PictureBox pic = new PictureBox();
-                pic.Image = Image.FromFile(filePath);
-                pic.Height = 702;
-                pic.Width = 702;
-                pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                flowLayoutPanel1.Controls.Add(pic);*/
-
-
-                Image image = Image.FromFile(filePath);
-                pictureBox1.Image = image;
-                
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-            else
-            { /*flowLayoutPanel1.Controls.Clear();*/
-                pictureBox1.Image = null;
-            }
-
-
             richTextBox1.Clear();
-
-            // Check if the selected node represents a text file
-            if (e.Node.Tag != null && e.Node.Tag.ToString().ToLower().EndsWith(".txt"))
-            {
-                pictureBox1.Visible = false;
-                /*flowLayoutPanel1.Visible = false;*/
-                richTextBox1.Visible = true;
-                // Load the contents of the text file from the file path stored in the Tag property of the node
-                string filePath = e.Node.Tag.ToString();
-                string text = File.ReadAllText(filePath);
-                richTextBox1.Text += text;
-                
-                /*using (StreamReader reader = new StreamReader(e.Node.Tag.ToString()))
+            string filePath = e.Node.FullPath;
+            if(File.Exists(filePath)) {
+                if (e.Node.Tag != null && (e.Node.Tag.ToString().ToLower().EndsWith(".jpg") || e.Node.Tag.ToString().ToLower().EndsWith(".jpeg") || e.Node.Tag.ToString().ToLower().EndsWith(".png") || e.Node.Tag.ToString().ToLower().EndsWith(".bmp") || e.Node.Tag.ToString().ToLower().EndsWith(".gif")))
                 {
-                    string content = reader.ReadToEnd();
-                    // Làm gì đó với nội dung của file văn bản ở đây.
-                    richTextBox1.Text = content;
-                }*/
+                    pictureBox1.Visible = true;
+
+                    richTextBox1.Visible = false;
+
+                    Image image = Image.FromFile(filePath);
+                    pictureBox1.Image = image;
+
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else if (e.Node.Tag != null && e.Node.Tag.ToString().ToLower().EndsWith(".txt"))
+                {
+                    pictureBox1.Visible = false;
+
+                    richTextBox1.Visible = true;
+
+                    string text = File.ReadAllText(filePath);
+                    richTextBox1.Text += text;
+                }
+                else
+                {
+                    pictureBox1.Image = null;
+                    richTextBox1.Clear();
+                    Process.Start(filePath);
+                }
             }
-            else
-            { richTextBox1.Controls.Clear(); }
+            
         }
     }
 }

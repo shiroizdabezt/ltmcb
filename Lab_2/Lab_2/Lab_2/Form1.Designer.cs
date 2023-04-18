@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_bai1 = new System.Windows.Forms.Button();
             this.btn_bai2 = new System.Windows.Forms.Button();
             this.btn_bai3 = new System.Windows.Forms.Button();
             this.btn_bai4 = new System.Windows.Forms.Button();
             this.btn_bai5 = new System.Windows.Forms.Button();
             this.btn_bai6 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btn_bai1
@@ -88,7 +90,9 @@
             this.btn_bai5.Size = new System.Drawing.Size(129, 65);
             this.btn_bai5.TabIndex = 4;
             this.btn_bai5.Text = "Bài 5";
+            this.toolTip1.SetToolTip(this.btn_bai5, "Bài này em không biết làm.");
             this.btn_bai5.UseVisualStyleBackColor = true;
+            this.btn_bai5.Click += new System.EventHandler(this.btn_bai5_Click);
             // 
             // btn_bai6
             // 
@@ -126,6 +130,7 @@
         private System.Windows.Forms.Button btn_bai4;
         private System.Windows.Forms.Button btn_bai5;
         private System.Windows.Forms.Button btn_bai6;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
